@@ -1,0 +1,28 @@
+name: Unittests & Auto-publish
+
+# Allow to trigger the workflow manually (e.g. when deps changes)
+on: [push, workflow_dispatch]
+
+jobs:
+  # Auto-publish when version is increased
+  publish-job:
+    # Only try to publish if:
+    # * Repo is etils (prevents running from forks)
+    # * Branch is `main`
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+    - uses: actions/checkout@v2
+
+    # Setup Python
+    - uses: actions/setup-python@v2
+      with:
+        python-version: 3.7
+
+    # Publish the package (if local `__version__` < pip version)
+    - uses: etils-actions/pypi-auto-publish@main
+      with:
+        module-name: epot_test
+        pypi-token: ${{ secrets.PYPI_API_TOKEN }}

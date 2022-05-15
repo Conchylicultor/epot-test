@@ -21,6 +21,8 @@ jobs:
       with:
         python-version: 3.7
 
+    - run: ls
+
     # Publish the package (if local `__version__` < pip version)
     - uses: etils-actions/pypi-auto-publish@main
       with:

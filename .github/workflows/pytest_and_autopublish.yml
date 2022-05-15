@@ -13,18 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
 
-    steps:
-    - uses: actions/checkout@v2
-
-    # Setup Python
-    - uses: actions/setup-python@v2
-      with:
-        python-version: 3.7
-
-    - run: ls
-
     # Publish the package (if local `__version__` < pip version)
     - uses: etils-actions/pypi-auto-publish@main
       with:
-        module-name: epot_test
         pypi-token: ${{ secrets.PYPI_API_TOKEN }}

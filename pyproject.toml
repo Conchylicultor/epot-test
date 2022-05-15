@@ -1,6 +1,7 @@
 [project]
 name = "epot-test"
 description = "aaa"
+readme = {text = "Hello"}
 requires-python = ">=3.7"
 authors = [{name = "Conchylicultor", email="etils@google.com"}]
 classifiers = [

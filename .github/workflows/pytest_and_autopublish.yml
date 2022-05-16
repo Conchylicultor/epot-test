@@ -21,4 +21,4 @@ jobs:
       with:
         pypi-token: ${{ secrets.PYPI_API_TOKEN }}
         gh-token: ${{ secrets.GITHUB_TOKEN }}
-        release_body: "Bug fixes and performances improvement."
+        release-body: "Bug fixes and performances improvement."

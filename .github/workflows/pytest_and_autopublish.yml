@@ -37,8 +37,7 @@ jobs:
     # * Repo is self (prevents running from forks)
     # * Branch is `main`
     if: |
-      github.repository == 'google-research/my_project'
-      && github.ref == 'refs/heads/main'
+      github.ref == 'refs/heads/main'
     needs: pytest-job  # Only publish after tests are successful
     runs-on: ubuntu-latest
     # permissions:

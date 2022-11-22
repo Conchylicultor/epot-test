@@ -15,6 +15,16 @@ dependencies = [
     "etils",
 ]
 
+[project.optional-dependencies]
+# Development deps (unittest, linting, formating,...)
+# Installed through `pip install .[dev]`
+dev = [
+    "pytest",
+    "pytest-xdist",
+    "pylint>=2.6.0",
+    "pyink",
+]
+
 # This is set automatically by flit using `etils.__version__`
 dynamic = ["version"]
 

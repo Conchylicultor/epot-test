@@ -4,6 +4,10 @@ description = "aaa"
 readme = "README.md"
 requires-python = ">=3.7"
 authors = [{name = "Conchylicultor", email="etils@google.com"}]
+
+# This is set automatically by flit using `etils.__version__`
+dynamic = ["version"]
+
 # classifiers = [
 #     "Programming Language :: Python :: 3",
 #     "Programming Language :: Python :: 3 :: Only",
@@ -24,9 +28,6 @@ dev = [
     "pylint>=2.6.0",
     "pyink",
 ]
-
-# This is set automatically by flit using `etils.__version__`
-dynamic = ["version"]
 
 [build-system]
 requires = ["flit_core >=3.5,<4"]

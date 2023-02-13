@@ -19,7 +19,7 @@ jobs:
     # 1. Publish the sub-package first
     - uses: etils-actions/pypi-auto-publish@main
       with:
-        pypi-token: ${{ secrets.PYPI_API_TOKEN }}
+        pypi-token: ${{ secrets.PYPI_API_TOKEN_DEPS }}
         path: "./sub-project/"
         # No GitHub release here
 

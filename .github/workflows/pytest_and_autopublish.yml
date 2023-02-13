@@ -21,6 +21,7 @@ jobs:
       with:
         pypi-token: ${{ secrets.PYPI_API_TOKEN_DEPS }}
         path: "./sub-project/"
+        pkg-name: epot_test_deps
         # No GitHub release here
 
     # 2. Publish top package
@@ -29,4 +30,5 @@ jobs:
         pypi-token: ${{ secrets.PYPI_API_TOKEN }}
         gh-token: ${{ secrets.GITHUB_TOKEN }}
         parse-changelog: true
+        pkg-name: epot_test
     
